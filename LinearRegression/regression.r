@@ -54,7 +54,10 @@ round(cor(newdata),2)
 #round(cor(newdata),2)
 
 
-
+#Note that we have duplicated the variable X.ActiveRequests,
+#because this variable has a strong correlation with specific message types
+#and a weak correlation with other message types. With the duplication we can
+#consider the different correlation respectively influences.
 dat$X.ActiveRequests1 <- dat$X.ActiveRequests
 dat$X.ActiveRequests1[dat$Msg == "connect"] <- 0
 #dat$X.ActiveRequests1[dat$Msg == "disconnect"] <- 0

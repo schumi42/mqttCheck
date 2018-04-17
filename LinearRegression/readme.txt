@@ -11,3 +11,8 @@ from a test run.bThe logs are *.csv files and can usually be found in:
 The script will produce a file model.txt that contains the resulting regression
 model.
 
+Note that we have duplicated the variable X.ActiveRequests, 
+because this variable has a strong correlation with specific message types
+and a weak correlation with other message types. With the duplication we can
+consider the different correlation respectively influences. 
+
